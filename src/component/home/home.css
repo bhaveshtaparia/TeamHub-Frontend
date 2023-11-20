@@ -1,0 +1,117 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f8f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+}
+
+h1 {
+  color: #333;
+}
+
+/* Search Bar Styles */
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Filters Styles */
+.filtersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.filtersContainer select {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+}
+
+/* User Card Styles */
+.userContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.userCard {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px;
+  width: calc(50% - 20px);
+  box-sizing: border-box;
+  background-color: #fff;
+  text-align: center;
+}
+
+.userCard img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+/* Pagination Styles */
+.paginationContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 8px 12px;
+  margin: 0 5px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Loading and Error Message Styles */
+p {
+  color: #e74c3c;
+  font-weight: bold;
+}
+.mid{
+  display: flex;
+  justify-content: center;
+}
+.btn{
+  background-color: green;
+}
+.btn:hover{
+  background-color: rgba(0, 128, 0, 0.692);
+}
+/* Responsive Styles */
+@media only screen and (max-width: 600px) {
+  .filtersContainer select {
+    width: 100%;
+  }
+
+  .userCard {
+    width: calc(100% - 20px);
+  }
+}
+.left{
+  position: relative;
+ width: 5vw;
+}
