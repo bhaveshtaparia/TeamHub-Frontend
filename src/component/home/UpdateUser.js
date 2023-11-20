@@ -21,7 +21,7 @@ function UpdateUser() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`http://localhost:5000/api/v1/update/user/${updatedUser.id}`, {
+      const response = await fetch(`https://teamhub-5qk4.onrender.com/api/v1/update/user/${updatedUser.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

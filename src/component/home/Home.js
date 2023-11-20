@@ -35,7 +35,7 @@ import { useAlert } from 'react-alert';
         try {
           // Make API call based on search term and selected filters
           const response = await fetch(
-            `http://localhost:5000/api/v1/get/user?page=${currentPage}&pageSize=${itemsPerPage}&domain=${selectedFilters.domain}&availability=${selectedFilters.availability}&gender=${selectedFilters.gender}&search=${searchTerm}`
+            `https://teamhub-5qk4.onrender.com/api/v1/get/user?page=${currentPage}&pageSize=${itemsPerPage}&domain=${selectedFilters.domain}&availability=${selectedFilters.availability}&gender=${selectedFilters.gender}&search=${searchTerm}`
             );
             
             // Check if the response is OK
@@ -69,7 +69,7 @@ import { useAlert } from 'react-alert';
     const alert=useAlert();
     const handleDelete = async (id) => {
       try {
-        const response = await fetch(`http://localhost:5000/api/v1/delete/user/${id}`, {
+        const response = await fetch(`https://teamhub-5qk4.onrender.com/api/v1/delete/user/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',
