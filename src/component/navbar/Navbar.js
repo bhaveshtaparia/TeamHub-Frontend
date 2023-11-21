@@ -7,8 +7,8 @@ const Navbar = () => {
       <div style={styles.logo}>TeamHub</div>
       <div style={styles.menu}>
         <Link to='/' style={styles.menuItem}>Home</Link>
-        <Link to='/' style={styles.menuItem}>Users</Link>
-        <Link to="/" style={styles.menuItem}>Teams</Link>
+        <Link to='/create/team' style={styles.menuItem}>Create Team</Link>
+        <Link to="/team" style={styles.menuItem}>Teams</Link>
       </div>
     </nav>
   );

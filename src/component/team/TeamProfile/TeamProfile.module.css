@@ -1,0 +1,26 @@
+
+.team-profile {
+    padding: 20px;
+  }
+  
+  .team-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+  }
+  .team-item:hover{
+   transform: scale(1.05);
+  }
+  
+  .team-item {
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    min-width: 200px;
+    text-align: center;
+    font-size: 18px;
+  }
+  

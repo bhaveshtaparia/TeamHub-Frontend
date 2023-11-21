@@ -5,6 +5,7 @@
   import './home.css';
 import { useNavigate } from 'react-router-dom';
 import { useAlert } from 'react-alert';
+import url from '../../url';
 
   // Define the HomePage component
   const HomePage = () => {
@@ -35,7 +36,7 @@ import { useAlert } from 'react-alert';
         try {
           // Make API call based on search term and selected filters
           const response = await fetch(
-            `https://teamhub-5qk4.onrender.com/api/v1/get/user?page=${currentPage}&pageSize=${itemsPerPage}&domain=${selectedFilters.domain}&availability=${selectedFilters.availability}&gender=${selectedFilters.gender}&search=${searchTerm}`
+            `${url}/api/v1/get/user?page=${currentPage}&pageSize=${itemsPerPage}&domain=${selectedFilters.domain}&availability=${selectedFilters.availability}&gender=${selectedFilters.gender}&search=${searchTerm}`
             );
             
             // Check if the response is OK
@@ -69,7 +70,7 @@ import { useAlert } from 'react-alert';
     const alert=useAlert();
     const handleDelete = async (id) => {
       try {
-        const response = await fetch(`https://teamhub-5qk4.onrender.com/api/v1/delete/user/${id}`, {
+        const response = await fetch(`${url}/api/v1/delete/user/${id}`, {
           method: 'DELETE',
           headers: {
             'Content-Type': 'application/json',

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import styles from './createUser.module.css';
 import {useAlert}from 'react-alert'
 import { useNavigate } from 'react-router-dom';
+import url from '../../../url';
 function CreateUser() {
     const alert=useAlert();
     const Navigate=useNavigate();
@@ -28,7 +29,7 @@ function CreateUser() {
     e.preventDefault();
 
     try {
-      const response = await fetch('https://teamhub-5qk4.onrender.com/api/v1/create/user', {
+      const response = await fetch(`${url}/api/v1/create/user`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

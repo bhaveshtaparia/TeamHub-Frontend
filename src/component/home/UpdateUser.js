@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import styles from './updateUser.module.css';
 import {useAlert}from 'react-alert'
+import url from '../../url';
 function UpdateUser() {
   const location = useLocation();
   const customProps = location.state?.customProps;
@@ -21,7 +22,7 @@ function UpdateUser() {
     e.preventDefault();
 
     try {
-      const response = await fetch(`https://teamhub-5qk4.onrender.com/api/v1/update/user/${updatedUser.id}`, {
+      const response = await fetch(`${url}/api/v1/update/user/${updatedUser.id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
